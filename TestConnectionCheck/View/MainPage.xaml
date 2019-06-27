@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:alert="clr-namespace:TestConnectionCheck"
+             x:Class="TestConnectionCheck.MainPage"
+             xmlns:vm="clr-namespace:TestConnectionCheck.ViewModel">
+    <Grid x:Name="layout"
+          BackgroundColor="Red">
+        <!--        <alert:Alert BackgroundColor="Fuchsia" />-->
+        <StackLayout Grid.Row="0" VerticalOptions="Start">
+            <Label Text="{Binding Message}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand" />
+            <Button Text="Main"
+                    Clicked="Handle_Clicked" />
+            <Button Text="Alert"
+                    Clicked="Handle_Clicked_1" />
+        </StackLayout>
+        <ContentView BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Grid.Row="0" ControlTemplate="{StaticResource alertTemplate}" />
+    </Grid>
+</ContentPage>

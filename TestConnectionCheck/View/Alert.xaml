@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms"
+      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+      x:Class="TestConnectionCheck.Alert"
+      xmlns:viewmodel="clr-namespace:TestConnectionCheck"
+      HorizontalOptions="FillAndExpand"
+      VerticalOptions="Start"
+      IsVisible="{Binding Alert}"
+      Margin="5">
+<!--    <Frame x:Name="bg" CornerRadius="7">-->
+<!--        <StackLayout Orientation="Vertical">-->
+            <Label Text="{Binding Message}"
+                   TextColor="White"
+                   HorizontalOptions="CenterAndExpand"
+                   Margin="20" />
+            <Button BackgroundColor="Transparent"
+                    BorderColor="Transparent"
+                    Text="x"
+                    FontAttributes="Bold"
+                    HorizontalOptions="EndAndExpand"
+                    Clicked="close"
+                    TextColor="White" />
+<!--        </StackLayout>-->
+<!--    </Frame>-->
+</Grid>
